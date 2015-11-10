@@ -13,7 +13,7 @@
     {
       "name": "xscale",
       "type": "linear",
-      "domain": {"data": "d", "field": "SurfaceArea"},
+      "domain": {"data": "d", "field": "Population"},
       "range": "width",
       "zero": false,
       "round": true,
@@ -22,7 +22,7 @@
     {
       "name": "yscale",
       "type": "linear",
-      "domain": {"data": "d", "field": "Population"},
+      "domain": {"data": "d", "field": "SurfaceArea"},
       "range": "height",
       "zero": false,
       "round": true,
@@ -32,14 +32,14 @@
 
   "axes": [
     {
-      "type": "x",
+      "type": "y",
       "title": "Surface Area",
-      "scale": "xscale"
+      "scale": "yscale"
     },
     {
-      "type": "y",
+      "type": "x",
       "title": "Population",
-      "scale": "yscale"
+      "scale": "xscale"
     }
   ],
 
@@ -50,8 +50,8 @@
       "properties": {
         "enter": {
           "interpolate": { "value": "linear" },
-          "y": { "scale": "yscale", "field": "Population"},
-          "x": { "scale": "xscale", "field": "SurfaceArea"},
+          "x": { "scale": "xscale", "field": "Population"},
+          "y": { "scale": "yscale", "field": "SurfaceArea"},
           "stroke": {"value": "#000"},
           "strokeWidth": {"value": 1}
         }
@@ -62,8 +62,8 @@
       "from": { "data": "d" },
       "properties": {
         "enter": {
-          "y": { "scale": "yscale", "field": "Population"},
-          "x": { "scale": "xscale", "field": "SurfaceArea"},
+          "x": { "scale": "xscale", "field": "Population"},
+          "y": { "scale": "yscale", "field": "SurfaceArea"},
           "fill": {"value": "#fff"},
           "stroke": {"value": "#000"},
           "strokeWidth": {"value": 1},
