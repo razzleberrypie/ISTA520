@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ryan Jicha Homework 12</title>
+    <script src="http://vega.github.io/vega-editor/vendor/d3.min.js"></script>
+    <script src="http://vega.github.io/vega/vega.min.js"></script>
+    <style type="text/css">
+        #content {
+            display: inline;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <h1>Life Expectancy by Population</h1>
+        <div id="lp"></div>
+        <h1>Population by Surface Area</h1>
+        <div id="ps"></div>
+        <h1>Surface Area by Independence Year</h1>
+        <div id="si"></div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    function parse(spec, elem) {
+        vg.parse.spec(spec, function(chart) { chart({el:elem}).update(); })
+    }
+    parse("pop_le_spec.json", "#lp");
+    parse("pop_sa_spec.json", "#ps");
+    parse("sa_ind_spec.json", "#si");
+</script>
+
+</html>

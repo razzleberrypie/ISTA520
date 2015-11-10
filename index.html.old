@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Homework 12</title>
+	<script src="http://vega.github.io/vega-editor/vendor/d3.min.js"></script>
+	<script src="http://vega.github.io/vega/vega.min.js"></script>
+
+</head>
+
+<body>
+	<div id="graphs">
+		<h1>Population vs Surface Area</h1>
+		<div id="pop_sa"></div>
+		<h1>Population by Life Expectancy</h1>
+		<div id="pop_le"></div>
+		<h1>Surface Area vs Independence Year</h1>
+		<div id="sa_ind"></div>
+	</div>
+</body>
+
+<script type="text/javascript">
+	function parse(spec, elem) {
+		vg.parse.spec(spec, function(chart) { chart({el:elem}).update(); })
+	}
+	parse("pop_le_spec.json", "#pop_le");
+
+</script>
+</html>	
